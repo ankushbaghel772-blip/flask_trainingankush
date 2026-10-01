@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator1</title>
+</head>
+
+<body>
+
+    <h1>Simple Calculator1</h1>
+
+    <form action="/calculate1" method="POST">
+
+        <label>Enter A:</label>
+        <input type="number" name="a" step="any" value="{{ a if a is defined else '' }}" required>
+
+        <br><br>
+
+        <label>Enter B:</label>
+        <input type="number" name="b" step="any" value="{{ b if b is defined else '' }}" required>
+
+        <br><br>
+
+        <button type="submit">Result</button>
+
+    </form>
+
+    {% if addition is defined %}
+    <section aria-live="polite">
+        <h2>Results</h2>
+        <p>Addition = {{ addition }}</p>
+        <p>Subtraction = {{ subtraction }}</p>
+        <p>Multiplication = {{ multiplication }}</p>
+        <p>Division = {{ division }}</p>
+    </section>
+    {% endif %}
+
+</body>
+</html>
