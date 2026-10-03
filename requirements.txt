@@ -1,5 +1,6 @@
 Flask
 SQLAlchemy
 bcrypt
-flask_SQLAlchemy
-pymysql
+Flask-SQLAlchemy
+PyMySQL
+gunicorn
